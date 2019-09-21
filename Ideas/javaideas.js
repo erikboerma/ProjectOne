@@ -103,9 +103,12 @@
      function BMI() {
          BMI = (user.weight * 703) / user.height
              //append to webpage
+         $("#BMI").text(BMI);
      }
 
      function Tracker() {
-
+         $("#start").text(user.track[0]);
+         $("#current").text(user.weight);
+         $("#goal").text(user.goal);
 
      }

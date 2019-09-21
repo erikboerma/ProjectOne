@@ -47,7 +47,7 @@
  //function CreateNewUser() {
 
  $(document).on("click", "#submit", function NewUser() {
-         event.preventDefault();
+
 
          user.username = $("#username-input").val().trim();
          //   user.password = $("#password-input").val().trim();

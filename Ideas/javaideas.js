@@ -1,3 +1,16 @@
+var config = {
+    apiKey: "AIzaSyCs3K5zwuOuS0odq89IpPLC7HnXTOcDqgI",
+    authDomain: "recent-user-with-all-use-e8e76.firebaseapp.com",
+    databaseURL: "https://recent-user-with-all-use-e8e76.firebaseio.com",
+    projectId: "recent-user-with-all-use-e8e76",
+    storageBucket: ""
+};
+
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
+
 var user = {
     username: //links to user input on database
         password: //links to password on login
@@ -44,7 +57,7 @@ function CreateNewUser() {
         user.track[0] = $("#weight-input").val().trim();
 
         if (user.password === $("#passwordCheck-input").val().trim()) {
-            database.push({
+            database.ref("/users").push({
 
                 user: user.username,
                 password: user.password,
@@ -74,7 +87,7 @@ function LoginPage() {
         var username = $("#username-input").val().trim();
         var password = $("#password-input").val().trim();
 
-        if (username === user.username || password === user.password) {
+        if (username === database.ref("/users").username || password === database.ref("/users").password) {
             //lead to user's page
         } else {
             //prompt error "incorrect username/password"
@@ -82,4 +95,9 @@ function LoginPage() {
 
     })
     $("#create-new-user").on("click", CreateNewUser())
+}
+
+function BMI() {
+    BMI = (user.weight * 703) / user.height
+        //append to webpage
 }

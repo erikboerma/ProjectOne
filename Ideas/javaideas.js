@@ -14,17 +14,17 @@
 
 
  var user = {
-     username: //links to user input on database
-         password: //links to password on login
-         email: //user email for notifications
-         nameF: //user first name
-         nameL: //user last name
-         sex: //user sex
-         age: //user age
-         weight: //user weight
-         height: //user height
-         goal: //user weight/health goals updated based off database changes
-         track: [] //array of new weight to track progess
+     username: "",
+     password: "",
+     email: "",
+     nameF: "",
+     nameL: "",
+     sex: "",
+     age: 0,
+     weight: 0,
+     height: 0,
+     goal: 0,
+     track: [] //array of new weight to track progess
  }
  var BMI = 0 //updates based off user health stats from calculator
  var newUser = false;

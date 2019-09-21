@@ -12,15 +12,20 @@ var user = {
         track: [] //array of new weight to track progess
 }
 var BMI = 0 //updates based off user health stats from calculator
-var NewUser = false;
+var newUser = false;
+var login = false;
 $("#new-user").on("click", function() {
-    NewUser = true;
+    newUser = true;
+})
+$("#login-page").on("click", function() {
+    login = true;
 })
 
-if (NewUser === true) {
+if (newUser === true) {
     CreateNewUser();
-}
-
+} else if (login === true) {
+    LoginPage();
+} else {}
 
 function CreateNewUser() {
 
@@ -61,4 +66,20 @@ function CreateNewUser() {
         }
     })
 
+}
+
+function LoginPage() {
+    $("#login").on("click", function LoginInput() {
+
+        var username = $("#username-input").val().trim();
+        var password = $("#password-input").val().trim();
+
+        if (username === user.username || password === user.password) {
+            //lead to user's page
+        } else {
+            //prompt error "incorrect username/password"
+        }
+
+    })
+    $("#create-new-user").on("click", CreateNewUser())
 }

@@ -44,7 +44,7 @@ function CreateNewUser() {
         user.track[0] = $("#weight-input").val().trim();
 
         if (user.password === $("#passwordCheck-input").val().trim()) {
-            database.attr({
+            database.push({
 
                 user: user.username,
                 password: user.password,

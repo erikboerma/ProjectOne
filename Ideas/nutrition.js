@@ -6,6 +6,6 @@ var endCals = ;
 
 
 
-"https://api.edamam.com/search?q=" + protien +"&&app_key=${" + apiKey +"}&from=0&to=5&calories="+ startCals +"-" + endCals +"&health=alcohol-free"
+"https://api.edamam.com/search?q=" + protien +"&&app_key=${" + apiKey +"}&from=0&to=5&calories="+ startCals + "-" + endCals +"&health=alcohol-free"
 
 

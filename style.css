@@ -1,5 +1,6 @@
 body {
     background-image: url("images/gymBackground.jpg");
+    color: white;
 }
 
 #homePage {
@@ -10,4 +11,10 @@ body {
 
 #homePageTitle {
     margin: auto;
+}
+
+.jumbotron {
+    color: black;
+    min-height: 15%;
+    
 }

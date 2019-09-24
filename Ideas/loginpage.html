@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="../style.css">
+    <link href="../style.css" rel="stylesheet">
 
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
@@ -21,12 +21,12 @@
     <h2>History</h2>
 </div>
 
+<body>
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-6">
 
-            <body>
                 <form>
                     <div class="form-group">
                         <label for="exampleInputUsername1">Username</label>
@@ -49,38 +49,40 @@
                         <input class="form-control" id="age-input" placeholder="Age (Years)">
                     </div>
                 </form>
-            </body>
-        </div>
-        <div class="col-lg-4">
+            </div>
 
-            <body>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Sex</label>
-                        <select class="form-control" id="sex-input">
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputWeight1">Weight</label>
-                        <input class="form-control" id="weight-input" placeholder="Weight (lbs)">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputHeight1">Height</label>
-                        <input class="form-control" id="height-input" placeholder="Height (inches)">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputAge1">Goal Weight</label>
-                        <input class="form-control" id="goal-input" placeholder="Weight (lbs)">
-                    </div>
-                </form>
-            </body>
-        </div>
-    </div>
-    
-    <div class="text-center">
-        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-    </div>
+            <div class="col-lg-6">
+                <body>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Sex</label>
+                            <select class="form-control" id="sex-input">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Yes, Please!</option>
 
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputWeight1">Weight</label>
+                            <input class="form-control" id="weight-input" placeholder="Weight (lbs)">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputHeight1">Height</label>
+                            <input class="form-control" id="height-input" placeholder="Height (inches)">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputAge1">Goal Weight</label>
+                            <input class="form-control" id="goal-input" placeholder="Weight (lbs)">
+                        </div>
+                    </form>
+                </body>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </div>
+        
+    </body>
 </html>

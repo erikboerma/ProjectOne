@@ -30,13 +30,13 @@
  var BMI = 0 //updates based off user health stats from calculator
  var newUser = false;
  var login = false;
- //$("#new-user").on("click", function() {
- //    newUser = true;
- //    location.replace("");
- // })
- //$("#login-page").on("click", function() {
- //     login = true;
- // })
+ $("#new-user").on("click", function() {
+         newUser = true;
+         Userpage();
+     })
+     //$("#login-page").on("click", function() {
+     //     login = true;
+     // })
 
  //if (newUser === true) {
  //     CreateNewUser();
@@ -47,7 +47,7 @@
  //function CreateNewUser() {
 
  $(document).on("click", "#submit", function NewUser() {
-         event.preventDefault();
+
 
          user.username = $("#username-input").val().trim();
          //   user.password = $("#password-input").val().trim();
@@ -121,4 +121,14 @@
      $("#current").text(user.weight);
      $("#goal").text(user.goal);
 
+ }
+
+ function Userpage() {
+     $("#name").text(user.nameF + " " + user.nameL);
+     $("#weight").text(user.weight);
+     $("#height").text(user.height);
+     $("#age").text(user.age);
+     $("#sex").text(user.sex);
+     $("#goal").text(user.goal);
+     BMI();
  }

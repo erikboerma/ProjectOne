@@ -109,26 +109,25 @@
      })
      $("#create-new-user").on("click", CreateNewUser())
  }
+ database.ref().on("child_added", function(snapshot) {
 
- function BMI() {
-     BMI = (user.weight * 703) / user.height
+
+     BMI = (snapshot.val().weight * 703) / snapshot.val().height
          //append to webpage
+
+     //function Tracker() {
+     //   $("#start").text(user.track[0]);
+     //     $("#current").text(user.weight);
+     //    $("#goal").text(user.goal);
+
+     // }
+     $("#name").text(snapshot.val().first + " " + snapshot.val().last);
+     $("#weight").text(snapshot.val().weight);
+     $("#height").text(snapshot.val().height);
+     $("#age").text(snapshot.val().age);
+     $("#sex").text(snapshot.val().sex);
+     $("#goal").text(snapshot.val().goal);
+     ``
      $("#BMI").text(BMI);
- }
 
- function Tracker() {
-     $("#start").text(user.track[0]);
-     $("#current").text(user.weight);
-     $("#goal").text(user.goal);
-
- }
-
- function Userpage() {
-     $("#name").text(user.nameF + " " + user.nameL);
-     $("#weight").text(user.weight);
-     $("#height").text(user.height);
-     $("#age").text(user.age);
-     $("#sex").text(user.sex);
-     $("#goal").text(user.goal);
-     BMI();
- }
+ })

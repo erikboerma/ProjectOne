@@ -127,7 +127,7 @@
      $("#height").text("Height: " + snapshot.val().height + " inches");
      $("#age").text("Age: " + snapshot.val().age);
      $("#sex").text("Sex: " + snapshot.val().sex);
-     $("#goal").text("Weight Goal: " + snapshot.val().goal);
+     $("#goal").text("Weight Goal: " + snapshot.val().goal + " lbs");
      $("#BMI").text("BMI: " + BMI.toFixed(1));
 
  })

@@ -5,6 +5,7 @@ $(document).ready(function () {
     var muscle = Math.floor(Math.Random() * 10);
     var equipment = Math.floor(Math.Random() * 5);
     
+    
     function displayWorkout() {
         // can search by equiptment and muscle group
         //possibly use random 
@@ -16,6 +17,7 @@ $(document).ready(function () {
     })
     .then(function (response) {
         var results = response.data;
+        console.log(queryURL)
 
     })
 }

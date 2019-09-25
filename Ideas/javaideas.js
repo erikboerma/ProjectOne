@@ -109,10 +109,11 @@
      })
      $("#create-new-user").on("click", CreateNewUser())
  }
- database.ref().on("child_added", function(snapshot) {
+ database.ref("/users").on("child_added", function(snapshot) {
 
 
-     BMI = (snapshot.val().weight * 703) / snapshot.val().height
+
+     BMI = (snapshot.val().weight * 703) / (snapshot.val().height * snapshot.val().height)
          //append to webpage
 
      //function Tracker() {
@@ -122,12 +123,11 @@
 
      // }
      $("#name").text(snapshot.val().first + " " + snapshot.val().last);
-     $("#weight").text(snapshot.val().weight);
-     $("#height").text(snapshot.val().height);
-     $("#age").text(snapshot.val().age);
-     $("#sex").text(snapshot.val().sex);
-     $("#goal").text(snapshot.val().goal);
-     ``
-     $("#BMI").text(BMI);
+     $("#weight").text("Weight: " + snapshot.val().weight + " lbs");
+     $("#height").text("Height: " + snapshot.val().height + " inches");
+     $("#age").text("Age: " + snapshot.val().age);
+     $("#sex").text("Sex: " + snapshot.val().sex);
+     $("#goal").text("Weight Goal: " + snapshot.val().goal);
+     $("#BMI").text("BMI: " + BMI.toFixed(1));
 
  })

@@ -2,6 +2,14 @@ body {
     background-image: url("../images/gymBackground.jpg");
     color: white;
 }
+.workout{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: black;
+    color: white;
+ }
 
 #homePage {
     background-color: black;

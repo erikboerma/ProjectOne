@@ -25,3 +25,7 @@ body {
     color: black;
     min-height: 15%;
 }
+
+a {
+    color: white;
+}

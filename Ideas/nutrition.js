@@ -22,14 +22,17 @@ function ajax() {
         method: "GET"
     })
         .then(function (response) {
-            var results = response.data;
-            var index = 0;
             // $(".nutrition").append(results);
-            console.log(response)
-            console.log(response.hits[0].recipe.label)
-            console.log(response.hits[0].recipe.ingredients)
-            $(".nutrition").html(response.hits[0].recipe.label);
-            $(".nutrition").html(response.hits[0].recipe.ingredients)
+            console.log(response);
+            console.log(response.hits[0].recipe.label);
+            console.log(response.hits[0].recipe.ingredients);
+            console.log(response.hits[0].recipe.ingredients[0].text)
+            $(".nutrition").append(response.hits[0].recipe.label);
+            $(".ingredients").append(response.hits[0].recipe.ingredients[0].text);
+            $(".ingredients").append(response.hits[0].recipe.ingredients[1].text);
+            $(".ingredients").append(response.hits[0].recipe.ingredients[2].text)
+
+
         })
 
     }

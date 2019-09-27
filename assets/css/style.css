@@ -1,12 +1,25 @@
 body {
-    background-image: url("../images/gymBackground.jpg");
+    background-image: url("../images/gymBackground5HD.jpg");
     color: white;
+    margin: auto;
 }
+.workout{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: black;
+    color: white;
+ }
 
 #homePage {
     background-color: black;
     color: white;
     margin-top: 15%;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+
 }
 
 #homePageTitle {
@@ -20,6 +33,7 @@ body {
 
 a {
     color: white;
+
 }
 
 .nutrition {

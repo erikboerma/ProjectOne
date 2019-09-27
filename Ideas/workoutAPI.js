@@ -38,7 +38,7 @@ $(document).ready(function() {
                 break;
             case 4:
                 muscleType = "Chest";
-                image = "assets/images/chest.jpg"
+                image = "assets/images/chest1.jpg"
                 break;
             case 10:
                 muscleType = "Legs";

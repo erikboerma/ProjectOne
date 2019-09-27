@@ -33,9 +33,12 @@ body {
 
 a {
     color: white;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cd10703fa93a81cc497bfd256319992b45f260e4
 }
 
 .nutrition {
-    color: white
+    color: black;
 }

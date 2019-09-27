@@ -1,6 +1,10 @@
 var apiKey = "c1af05bee1161ebc3a62cf3369b2b344"
 var apiID = "c6bee22a";
-var protien = "chicken";
+var protien = {
+ 1:"chicken",
+ 2:"steak",
+ 3:"fish",
+}
 // var startCals = 10; //range
 // var endCals = 5000;
 console.log(protien);
@@ -23,14 +27,16 @@ function ajax() {
     })
         .then(function (response) {
             // $(".nutrition").append(results);
+
+            var newDiv = $("<div>")
             console.log(response);
             console.log(response.hits[0].recipe.label);
             console.log(response.hits[0].recipe.ingredients);
             console.log(response.hits[0].recipe.ingredients[0].text)
-            $(".nutrition").append(response.hits[0].recipe.label);
-            $(".ingredients").append(response.hits[0].recipe.ingredients[0].text);
-            $(".ingredients").append(response.hits[0].recipe.ingredients[1].text);
-            $(".ingredients").append(response.hits[0].recipe.ingredients[2].text)
+            $(".label").append(response.hits[1].recipe.label);
+            $(".ingredients").append("<div>" + newDiv + response.hits[1].recipe.ingredients[0].text + "</div>");
+            $(".ingredients").append("<div>" + newDiv + response.hits[1].recipe.ingredients[1].text + "</div>");
+            $(".ingredients").append("<div>" + response.hits[1].recipe.ingredients[2].text + "</div>")
 
 
         })

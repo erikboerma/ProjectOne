@@ -6,32 +6,32 @@ var protien = "";
 // var endCals = 5000;
 
 console.log(protien);
-    function displayRecipe() {
-    
-        var queryURL = "https://api.edamam.com/search?q=" + protien + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=3&calories=591-722&health=alcohol-free"
-    
-        $.ajax({
-            url: queryURL,
-            method: "GET"
+function displayRecipe() {
+
+    var queryURL = "https://api.edamam.com/search?q=" + protien + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=3&calories=591-722&health=alcohol-free"
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+        .then(function (response) {
+            // $(".nutrition").append(results);
+
+            var newDiv = $("<div>")
+            console.log(response);
+            console.log(response.hits[0].recipe.label);
+            console.log(response.hits[0].recipe.ingredients);
+            console.log(response.hits[0].recipe.ingredients[0].text)
+            $(".label").html(response.hits[1].recipe.label);
+            $(".ingredients").html("<div>" + newDiv + response.hits[1].recipe.ingredients[0].text + "</div>");
+            $(".ingredients").html("<div>" + newDiv + response.hits[1].recipe.ingredients[1].text + "</div>");
+            $(".ingredients").html("<div>" + response.hits[1].recipe.ingredients[2].text + "</div>")
+
+
         })
-            .then(function (response) {
-                // $(".nutrition").append(results);
-    
-                var newDiv = $("<div>")
-                console.log(response);
-                console.log(response.hits[0].recipe.label);
-                console.log(response.hits[0].recipe.ingredients);
-                console.log(response.hits[0].recipe.ingredients[0].text)
-                $(".label").text(response.hits[1].recipe.label);
-                $(".ingredients").text("<div>" + newDiv + response.hits[1].recipe.ingredients[0].text + "</div>");
-                $(".ingredients").text("<div>" + newDiv + response.hits[1].recipe.ingredients[1].text + "</div>");
-                $(".ingredients").text("<div>" + response.hits[1].recipe.ingredients[2].text + "</div>")
-    
-    
-            })
-    
-        }
-        displayRecipe();
+
+    }
+    displayRecipe();
 
 
 
@@ -61,7 +61,8 @@ $(document).on("click", "#submit1", function nutrition() {
 
 
 
-    return displayRecipe(protien);
+        }
+            return displayRecipe(protien);
 
 });
 

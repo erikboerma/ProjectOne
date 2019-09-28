@@ -62,7 +62,7 @@ $(document).ready(function() {
     })
     
     $("#rndm").click(function() {
-        var equipment = Math.floor(Math.random() * 10) + 1;
+        var equipment = Math.floor(Math.random() * 9) + 1;
         random(); 
         console.log("click")
         console.log(equipment)

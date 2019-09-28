@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- bootstrap link  -->
 
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- css link-->
     <link href="../ProjectOne/assets/css/style.css" rel="stylesheet">
 
@@ -18,6 +22,7 @@
 <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="Ideas/workoutAPI.js"></script>
+
 <script src="../ProjectOne/stopwatch.js"></script>
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
@@ -25,6 +30,14 @@
 <!-- css link-->
 <link href="../ProjectOne/assets/css/style.css" rel="stylesheet">
 <title>Welcome to the Gym</title>
+
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- css link-->
+    <link href="../ProjectOne/assets/css/style.css" rel="stylesheet">
+    <title>Welcome to the Gym</title>
+
 </head>
 
 <nav class="navbar navbar-dark bg-dark">
@@ -35,6 +48,7 @@
     <a href="../ProjectOne/loginpage.html">Login Page</a>
 
 </nav>
+
 
 
 <div class="row" id="stopwatch">
@@ -98,6 +112,32 @@
             </div>
         </div>
         <div class="col-lg-2"></div>
+
+
+
+<body>
+    <div class="container workout" id="workout">
+        <div class="row">
+
+            <h2>Search for your desired workout</h2>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="APIsearch">
+                    <option value=1>Biceps</option>
+                    <option value=5>Triceps</option>
+                    <option value=4>Chest</option>
+                    <option value=10>Legs</option>
+                    <option value=9>Back</option>
+                    <option value=6>Abdominals</option>
+                </select>
+                <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
+                <div class="jumbotron" id="new"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 </body>

@@ -2,24 +2,32 @@ body {
     background-image: url("../images/gymBackground5HD.jpg");
     color: white;
     margin: auto;
+    height: 100%;
 }
-.workout{
-    width: 500px;
-    height: 500px;
-    margin: auto;
-    margin-top: 10%;
-    background-color: black;
-    color: white;
- }
+
 
 #homePage {
+    height: 100%;
+    width: 75%;
+    text-align: center;
     background-color: black;
     color: white;
 
+
+
+    margin-top: 15%;
+    margin-left: 10%;
+
 }
 
-#homePageTitle {
-    margin: auto;
+#loginPage {
+    height: 100%;
+    width: 75%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 15%;
+    margin-left: 10%;
 }
 
 .jumbotron {

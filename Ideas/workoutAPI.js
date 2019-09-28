@@ -60,4 +60,14 @@ $(document).ready(function() {
         displayWorkout();
 
     })
-});
+    
+    $("#rndm").click(function() {
+        var equipment = Math.floor(Math.random() * 9) + 1;
+        random(); 
+        console.log("click")
+        console.log(equipment)
+    });
+    function random() {
+    displayWorkout();
+    }
+})

@@ -33,12 +33,12 @@ body {
 
 a {
     color: white;
-<<<<<<< HEAD
-=======
-
->>>>>>> cd10703fa93a81cc497bfd256319992b45f260e4
 }
 
 .nutrition {
     color: black;
+}
+#stopwatch {
+    border: 1px solid;
+    background-color: white;
 }

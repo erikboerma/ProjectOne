@@ -54,3 +54,18 @@ a {
     color: white;
     text-align: center;
 }
+#sidebar {
+    border: 1px solid;
+    background-color: black;
+    color: red;
+}
+#workout {
+    border: 1px solid;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.workHead {
+    text-align: center;
+}
+

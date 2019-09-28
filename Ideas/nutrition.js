@@ -59,7 +59,7 @@ $(document).on("click", "#submit1", function nutrition() {
         default:
             break;
 
-    }
+
 
     return displayRecipe(protien);
 

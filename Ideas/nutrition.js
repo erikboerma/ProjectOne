@@ -23,22 +23,17 @@ function displayRecipe() {
                     $(".ingredients").append("<li>" + response.hits[k].recipe.ingredients[i].text + "</li>");
                 }
                 $(".ingredients").append("<div><img src='" + response.hits[k].recipe.image + "'></div>");
-                
 
-                var toAdd = document.createDocumentFragment();
-                for (var j = 0; j < 4; j++) {
-                    var newDiv = document.createElement('div');
-                    newDiv.id = "new" + j;
-                    newDiv.className = 'ingredients' + j;
-                    $(".ingredients" + j).append("<li>" + response.hits[k].recipe.ingredients[i].text + "</li>")
-                    toAdd.appendChild(newDiv);
-                }
             }
-
+            
+            for (var j = 0; j < response.hits.length; j++) {
+                $(".newColumn").append('<div class="label">'+ response.hits[j].recipe.label + '</div>');
+                console.log("new")
+                console.log(response.hits[j].recipe.label);
+        }
         })
 
 }
-displayRecipe();
 
 
 

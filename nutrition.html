@@ -16,15 +16,15 @@
 
 </head>
 <nav class="navbar navbar-dark bg-dark">
-        <!-- Navbar content -->
-    
-        <a href="../ProjectOne/home.html">Home Page</a>
-        <a href="../ProjectOne/workout1.html">Workout Page</a>
-        <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
-        <a href="../ProjectOne/loginpage.html">Login Page</a>
-    
-    </nav>
-    
+    <!-- Navbar content -->
+
+    <a href="../ProjectOne/home.html">Home Page</a>
+    <a href="../ProjectOne/workout1.html">Workout Page</a>
+    <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
+    <a href="../ProjectOne/loginpage.html">Login Page</a>
+
+</nav>
+
 
 <body>
     <div class="jumbotron">
@@ -32,37 +32,54 @@
     </div>
 
     <div class="row">
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Protein Choice</label>
-            <select class="form-control" id="APIsearch">
-                <option value="steak">Steak</option>
-                <option value="chicken">Chicken</option>
-                <option value="fish">Fish</option>
-                <option value="veggie">Veggie</option>
-                
-            </select>
-            <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
-            
-
-    <!-- <div class="row"> -->
-    <!-- <div class="container"> -->
-    <div class="card">
-        <div class="card-body">
-            <div class="card-body">
-                <h5 class="card-title">Recipe: <span class="label"></span> </h5> 
-                <p class="card-text"><span class="ingredients"></span></p>
-                <p class="card-text"><span class="nutrition"></span></p>
+        <div class="container nutritionSearch">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Protein Choice</label>
+                <select class="form-control" id="APIsearch">
+                    <option value="steak">Steak</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="fish">Fish</option>
+                    <option value="veggie">Veggie</option>
 
 
+                </select>
+                <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
             </div>
         </div>
     </div>
 
-         
-    
- 
+    <div class="row">
+        <div class="col-lg-1"></div>
 
-    <button id="search" class="btn btn-success search">search</button>
+        <div class="col-lg-5">
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recipe: <span class="label"></span> </h5>
+                        <p class="card-text"><span class="ingredients"></span></p>
+                        <p class="card-text"><span class="nutrition"></span></p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-5">
+                <div class="container">
+                    <div class="card">
+                        <div id="newCol">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+
+    <!-- <button id="search" class="btn btn-success search">search</button> -->
 
 </body>
 

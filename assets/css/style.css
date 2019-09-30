@@ -68,4 +68,10 @@ a {
 .workHead {
     text-align: center;
 }
-
+.nutritionSearch{
+    border: 1px solid;
+}
+.form-group {
+    background-color: white;
+    text-align: center;
+}

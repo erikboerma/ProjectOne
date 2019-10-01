@@ -12,9 +12,6 @@ body {
     text-align: center;
     background-color: black;
     color: white;
-
-
-
     margin-top: 15%;
     margin-left: 10%;
 
@@ -32,7 +29,9 @@ body {
 
 .jumbotron {
     color: black;
-    min-height: 15%;
+    /* min-height: 15%; */
+    padding: 15px; 
+    text-align: center;
 }
 
 a {

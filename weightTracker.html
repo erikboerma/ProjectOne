@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weight Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<div class="jumbotron">
+    <h1>Weight Tracker</h1>
+</div>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-header">Past Weights</div>
+                <div class="card-body">
+                    <table class="table table-sm table hover" id="employee-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th score="col">Weight (lbs)</th>
+                                <th score="col">% Change</th>
+                                <th score="col">BMI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card md-4">
+                <div class="card-header">Add your Weight</div>
+                <div class="card-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="weight-input">Weight</label>
+                            <input class="form-control" id="weight" placeholder="Weight in lbs.">
+                        </div>
+
+                        <button class="btn btn-primary float-right" id="add-weight">Submit!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

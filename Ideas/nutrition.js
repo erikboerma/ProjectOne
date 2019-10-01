@@ -6,7 +6,7 @@ var protien = "";
 console.log(protien);
 function displayRecipe() {
    var queryURL = "https://api.edamam.com/search?q=" + protien + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=3&calories=591-722&health=alcohol-free";
-   $.ajax({
+      $.ajax({
            url: queryURL,
            method: "GET"
        })
@@ -25,13 +25,13 @@ function displayRecipe() {
                }
                $("#1" + num[k]).append("<div><img src='" + response.hits[k].recipe.image + "'></div>");
                $("#3" + num[k]).attr("href", "" + response.hits[k].recipe.url)
-           }
+            }
        })
 }
 displayRecipe();
 var queryURL = "https://api.edamam.com/search?q=" + protien + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=3&calories=591-722&health=alcohol-free"
 $(document).on("click", "#submit1", function nutrition() {
-   $(".ingredients").empty()
+    $(".ingredients").empty()
    protien = $("#APIsearch").val()
    console.log(protien)
    switch (parseInt(protien)) {

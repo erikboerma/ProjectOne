@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     apiKey: "AIzaSyB_u64MjpDHqA7cw3xQ4QCAnnlRvpcLfi8",
     authDomain: "domm-a7373.firebaseapp.com",
@@ -12,14 +13,18 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
-$("#add-weight").on("click", function(event) {
+
+$(document).on("click", "#add-weight-btn", function newWeight(event) {
+
     event.preventDefault();
 
     var weightInput = $("#weight").val().trim();
-    var moment = moment().format("x")
+    var date = moment().format('l');
 
     var newWeight = {
         weight: weightInput,
+        current: date,
+
     
 };
 
@@ -31,4 +36,17 @@ $("#weight").val("");
 
 database.ref("/weight").on("child_added", function(childSnapshot) {
     var weightInput = childSnapshot.val().weight;
+    var date = childSnapshot.val().current;
+    console.log("base")
+
+    //pounds lost /start weight) * 100
+
+
+    var newRow = $("<tr>").append(
+        $("<td>").text(date),
+        $("<td>").text(weightInput),
+    );
+
+    $("#weightTable > tbody").append(newRow);
+    
 })

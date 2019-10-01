@@ -74,3 +74,11 @@ a {
     background-color: white;
     text-align: center;
 }
+
+#weightTable {
+    color: black;   
+}
+
+.card-header {
+    color: black;
+}

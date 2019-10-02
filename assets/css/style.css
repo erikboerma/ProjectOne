@@ -1,76 +1,106 @@
 body {
-    background-image: url("../images/gymBackground5HD.jpg");
-    color: white;
-    margin: auto;
-    height: 100%;
+  background-image: url("../images/gymBackground5HD.jpg");
+  color: white;
+  margin: auto;
+  height: 100%;
 }
 
-
 #homePage {
-    height: 100%;
-    width: 75%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin-top: 15%;
-    margin-left: 10%;
-
+  height: 100%;
+  width: 75%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 15%;
+  margin-left: 10%;
 }
 
 #loginPage {
-    height: 100%;
-    width: 75%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin-top: 15%;
-    margin-left: 10%;
+  height: 100%;
+  width: 75%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 15%;
+  margin-left: 10%;
 }
 
 .jumbotron {
-    color: black;
-    /* min-height: 15%; */
-    padding: 15px; 
-    text-align: center;
+  color: black;
+  /* min-height: 15%; */
+  padding: 15px;
+  text-align: center;
 }
 
 a {
-    color: white;
+  color: white;
 }
 
 .nutrition {
-    color: black;
+  color: black;
 }
-#stopwatch {
-    border: 1px solid;
-    background-color: white;
-}
+
 #display {
-    color: black;
-    text-align: center;
+  color: white;
+  text-align: center;
+  font-size: 30px;
 }
- #laps {
-    color: white;
-    text-align: center;
+#laps {
+  color: white;
+  text-align: center;
 }
 #sidebar {
-    border: 1px solid;
-    background-color: black;
-    color: red;
+  border: 1px solid;
+  background-color: black;
 }
 #workout {
-    border: 1px solid;
-    background-color: black;
-    color: white;
-    text-align: center;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#workoutContainer {
+  background-color: black;
+  width: 1200px;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin: 5%;
 }
 .workHead {
-    text-align: center;
+  text-align: center;
 }
-.nutritionSearch{
-    border: 1px solid;
+.nutritionSearch {
+  border: 1px solid;
 }
 .form-group {
+  background-color: black;
+  text-align: center;
+}
+
+.workoutButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+}
+
+.workoutButton:hover {
+  background-color: green;
+}
+
+
+#new {
+    background-color: black;
+    color: white;
+}
+
+#hrWorkout {
     background-color: white;
-    text-align: center;
 }

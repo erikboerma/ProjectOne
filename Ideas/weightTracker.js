@@ -13,40 +13,51 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
+var date = moment().format('l');
+var currentWeight = "";
 
 $(document).on("click", "#add-weight-btn", function newWeight(event) {
 
     event.preventDefault();
 
-    var weightInput = $("#weight").val().trim();
-    var date = moment().format('l');
+    currentWeight = $("#weight").val().trim();
 
-    var newWeight = {
-        weight: weightInput,
-        current: date,
+    // var weight = {
+    //     number: 0,
+    //     current: date,
 
+    database.ref("/weight").set({
+        weight: currentWeight,
+        lastDate: date
+
+    });
     
-};
-
-database.ref("/weight").push(newWeight);
-
-$("#weight").val("");
+    
 });
+database.ref("/weight").on("value", function () {
 
+    var newRow = $("<tr>").append(
+        $("<td>").text(date),
+        $("<td>").text(currentWeight),
+        $("<td>").text(currentWeight - lastWeight)
+    );
 
-database.ref("/weight").on("child_added", function(childSnapshot) {
-    var weightInput = childSnapshot.val().weight;
-    var date = childSnapshot.val().current;
-    console.log("base")
+    $("#weightTable > tbody").append(newRow);
+})
+    
+    
+    
+    
+    var lastWeight = 0;
+    var lastDate = 0;
+    
+    
+    database.ref("/weight").on("child_added", function (childSnapshot) {
+    
+    lastWeight = childSnapshot.val().weight;
+    lastDate = childSnapshot.val().lastDate;
 
     //pounds lost /start weight) * 100
 
 
-    var newRow = $("<tr>").append(
-        $("<td>").text(date),
-        $("<td>").text(weightInput),
-    );
-
-    $("#weightTable > tbody").append(newRow);
-    
 })

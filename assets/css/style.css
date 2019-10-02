@@ -59,7 +59,7 @@ a {
   text-align: center;
 }
 
-#workoutContainer {
+.mainContainer {
   background-color: black;
   width: 1200px;
   border: 2px solid black;

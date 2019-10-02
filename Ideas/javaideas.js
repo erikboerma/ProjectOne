@@ -30,6 +30,7 @@
  var BMI = 0 //updates based off user health stats from calculator
  var newUser = false;
  var login = false;
+
  $("#new-user").on("click", function() {
          newUser = true;
          Userpage();
@@ -46,7 +47,8 @@
 
  //function CreateNewUser() {
 
- $(document).on("click", "#submit", function NewUser() {
+ $(document).on("click", "#submitLogin", function NewUser() {
+     console.log("clicked")
 
 
          user.username = $("#username-input").val().trim();
@@ -62,10 +64,10 @@
          // user.track[0] = $("#weight-input").val().trim();
 
          //   if (user.password === $("#passwordCheck-input").val().trim()) {
-         database.ref("/users").push({
-
-             user: user.username,
-             //    password: user.password,
+             
+             var newUser = {
+            user: user.username,
+            //    password: user.password,
              //   email: user.email,
              first: user.nameF,
              last: user.nameL,
@@ -74,26 +76,28 @@
              weight: user.weight,
              height: user.height,
              goal: user.goal,
+            }
              //track: user.track
-
+             
              //continue to next page
              //    });
-
+             
              //   } else {
              //error prompt, do not continue to next page
              // }
-         })
-         console.log(user.username)
-         console.log(user.nameF)
-         console.log(user.nameL)
-         console.log(user.age)
-         console.log(user.sex)
-         console.log(user.weight)
-         console.log(user.height)
-         console.log(user.goal)
-     })
-     // }
-
+             database.ref("/users").push(newUser)
+            })
+             console.log(user.username)
+             console.log(user.nameF)
+             console.log(user.nameL)
+             console.log(user.age)
+             console.log(user.sex)
+             console.log(user.weight)
+             console.log(user.height)    
+             console.log(user.goal)
+             
+        // }
+        
  function LoginPage() {
      $("#login").on("click", function LoginInput() {
 

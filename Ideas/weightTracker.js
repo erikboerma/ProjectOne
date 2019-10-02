@@ -65,6 +65,7 @@ database.ref("/weight").on("value", function () {
 
 })
 
-database.ref("/weight").on("child_added", function(snapshot, prevChildKey) {
+database.ref("/weight").on("child_added", function(snapshot, prevChildKey, ) {
     var newPost = snapshot.val();
-    console.log("Previous Post ID: " + prevChildKey.weight);})
+    console.log("Previous Post ID: " + prevChildKey);
+})

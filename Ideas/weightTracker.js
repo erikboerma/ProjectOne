@@ -26,14 +26,16 @@ $(document).on("click", "#add-weight-btn", function newWeight(event) {
     //     number: 0,
     //     current: date,
 
-    database.ref("/weight").set({
+    database.ref("/weight").push({
         weight: currentWeight,
         lastDate: date
 
     });
     
-    
+    $("#weight").val("")
 });
+
+
 database.ref("/weight").on("value", function () {
 
     var newRow = $("<tr>").append(
@@ -52,6 +54,7 @@ database.ref("/weight").on("value", function () {
     var lastDate = 0;
     
     
+
     database.ref("/weight").on("child_added", function (childSnapshot) {
     
     lastWeight = childSnapshot.val().weight;
@@ -61,3 +64,7 @@ database.ref("/weight").on("value", function () {
 
 
 })
+
+database.ref("/weight").on("child_added", function(snapshot, prevChildKey) {
+    var newPost = snapshot.val();
+    console.log("Previous Post ID: " + prevChildKey.weight);})

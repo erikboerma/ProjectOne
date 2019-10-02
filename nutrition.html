@@ -22,34 +22,56 @@
             text-align: center;
             font-weight: bold;
         }
-
-       
+        
+        #nfacts {
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        ul {
+            text-align: left;
+        }
+        
+        li {
+            text-align: left;
+        }
+        
+        #allergy {
+            text-align: left;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        #rows {
+            align-content: center;
+        }
     </style>
 ​
 </head>
 <nav class="navbar navbar-dark bg-dark">
-        <a href="../ProjectOne/home.html">Home Page</a>
-        <a href="../ProjectOne/workout1.html">Workout Page</a>
-        <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
-        <a href="../ProjectOne/weightTracker.html">Weight Tracker</a>
-        <a href="../ProjectOne/loginpage.html">Login Page</a>
+    <!-- Navbar content -->
+​
+    <a href="../ProjectOne/home.html">Home Page</a>
+    <a href="../ProjectOne/workout1.html">Workout Page</a>
+    <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
+    <a href="../ProjectOne/loginpage.html">Login Page</a>
+​
 </nav>
-
-
-<div class="jumbotron">
-    <h1>Nutrition</h1>
-</div>
-
-
+​
+​
 <body>
+    <div class="jumbotron">
+        <h1>Nutrition Page</h1>
+    </div>
 ​
     <div class="row">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Choose a core ingredient:</label>
             <select class="form-control" id="APIsearch">
-                <option value="steak">Steak</option>
+                <option value="beef">Beef</option>
                 <option value="chicken">Chicken</option>
-                <option value="fish">Fish</option>
+                <option value="pork">Pork</option>
+                <option value="seafood">Seafood</option>
                 <option value="tofu">Tofu</option>
                 <option value="veggie">Vegetable</option>
                 
@@ -57,19 +79,20 @@
             </select>
             <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
 ​
-​
-            <div class="row" id="row1">
-                <!-- <div class="col" id="a">
+            <div id="rows">
+                <div class="row" id="row1">
+                    <!-- <div class="col" id="a">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-body">
                                 <h5 class="card-title">Recipe: <span class="label"></span> </h5>
+                                <p class="card-text"><span class="facts" id="0"><li></li><li></li><li></li><li></li></span></p>
                                 <p class="card-text"><span class="ingredients" id="1a"></span></p>
                                 <p class="card-text"><span class="nutrition" id="1a"></span></p> -->
 ​
 ​
+                </div>
             </div>
-​
 ​
 ​
 ​

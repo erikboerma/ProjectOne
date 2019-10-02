@@ -15,15 +15,7 @@ body {
   margin-left: 10%;
 }
 
-#loginPage {
-  height: 100%;
-  width: 75%;
-  text-align: center;
-  background-color: black;
-  color: white;
-  margin-top: 15%;
-  margin-left: 10%;
-}
+
 
 .jumbotron {
   color: black;
@@ -65,6 +57,7 @@ a {
   border: 2px solid black;
   border-radius: 30px;
   margin: 5%;
+  align-content: center;
 }
 .workHead {
   text-align: center;
@@ -93,7 +86,27 @@ a {
 
 .workoutButton:hover {
   background-color: green;
+  text-decoration: none;
 }
+
+.homeButton {
+    display: inline-block;
+    padding: 18px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: grey;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .homeButton:hover {
+    background-color: lightgrey;
+    text-decoration: none;
+  }
 
 
 #new {
@@ -112,4 +125,8 @@ a {
 
 .card-header {
     color: black;
+}
+
+#submitLogin {
+    margin-left: 44%;
 }

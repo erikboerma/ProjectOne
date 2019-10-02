@@ -18,7 +18,7 @@ $(document).ready(function() {
             .then(function(response) {
 
 
-                $("#new").html("<h2>" + muscleType + " Workout</h2>" + response.results[0].description + "<img src=" + image + ">")
+                $("#new").html("<hr id='hrWorkout'>" + "<h2>" + muscleType + " Workout</h2>" + response.results[0].description + "<img src=" + image + " height=250px width=350px>")
             })
     }
     var image = "";

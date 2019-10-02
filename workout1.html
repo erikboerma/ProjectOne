@@ -41,46 +41,34 @@
 
 </head>
 
-<nav class="navbar navbar-dark bg-dark">
-    <!-- Navbar content -->
 
-    <a href="../ProjectOne/home.html">Home Page</a>
-    <a href="../ProjectOne/workout1.html">Workout Page</a>
-    <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
-    <a href="../ProjectOne/loginpage.html">Login Page</a>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
 
-</nav>
+        <a href="../ProjectOne/home.html">Home Page</a>
+        <a href="../ProjectOne/workout1.html">Workout Page</a>
+        <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
+        <a href="../ProjectOne/loginpage.html">Login Page</a>
+
+    </nav>
 
 
 
-<div class="row" id="stopwatch">
+    <div class="row mainContainer">
+        
+        <div class="col-md-1"></div>
 
-    <div class="col-sm-5"></div>
-
-    <div class="col-sm-2">
-        <div id="wrapper">
+        <div class="col-md-5" id="stopwatch">
 
             <div id="display">00:00</div>
 
             <div id="buttons">
-                <button id="start">Start</button>
-                <button id="stop">Stop</button>
-                <button id="reset">Reset</button>
-                <button id="lap">Lap</button>
+                <button class="workoutButton" id="start">Start</button>
+                <button class="workoutButton" id="stop">Stop</button>
+                <button class="workoutButton" id="reset">Reset</button>
+                <button class="workoutButton" id="lap">Lap</button>
             </div>
-
-        </div>
-
-        <div class="col-sm-5"></div>
-
-    </div>
-</div>
-
-<body>
-
-
-    <div class="row">
-        <div class="col-lg-2">
             <div class="wrapper">
                 <nav id="sidebar">
                     <div class="sidebar-header">
@@ -90,34 +78,39 @@
 
                 </nav>
             </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="container workout" id="workout">
-                <div class="row">
-                    <div class="workHead">
-                        <h2>Search for your desired workout</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="APIsearch">
-                            <option value=1>Biceps</option>
-                            <option value=5>Triceps</option>
-                            <option value=4>Chest</option>
-                            <option value=10>Legs</option>
-                            <option value=9>Back</option>
-                            <option value=6>Abdominals</option>
-                        </select>
-                        <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
-                        <a class="btn btn-primary btn-lg" id="rndm" role="button">Randomize</a>
 
-                        <div class="jumbotron" id="new"></div>
-                    </div>
+
+        </div>
+
+
+
+    <div class="col-lg-6">
+        <div class="container workout" id="workout">
+            <div class="row">
+                <div class="workHead">
+                    <h2>Pick a muscle group</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Muscle Options:</label>
+                    <select class="form-control" id="APIsearch">
+                        <option value=1>Biceps</option>
+                        <option value=5>Triceps</option>
+                        <option value=4>Chest</option>
+                        <option value=10>Legs</option>
+                        <option value=9>Back</option>
+                        <option value=6>Abdominals</option>
+                    </select>
+                    <a class="workoutButton" id="submit1" role="button">Submit</a>
+                    
+                    <div class="jumbotron" id="new"></div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-2"></div>
+    </div>
+    <div class="col-lg-2"></div>
+    
 
 
 

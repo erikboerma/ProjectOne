@@ -20,11 +20,12 @@
         
         h1 {
             text-align: center;
-            font-weight: bold;
+            font-weight: bolder;
+            font-size: 75px;
         }
         
         #nfacts {
-            text-align: left;
+            text-align: center;
             font-weight: bold;
         }
         
@@ -53,6 +54,55 @@
         .row {
             align-content: center;
         }
+        
+        .jumbotron {
+            background-image: url("assets/images/nut.jpg");
+            color: white;
+            font-weight: bolder;
+        }
+        
+        label {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .slidecontainer {
+            width: 100%;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+        
+        .slider:hover {
+            opacity: 1;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
     </style>
 ​
 </head>
@@ -74,7 +124,7 @@
 ​
     <div class="row">
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Choose a core ingredient:</label>
+            <label for="exampleFormControlSelect1">SEARCH RECIPES BY A CORE INGREDIENT:</label>
             <select class="form-control" id="APIsearch">
                 <option value="beef">Beef</option>
                 <option value="chicken">Chicken</option>
@@ -82,9 +132,11 @@
                 <option value="seafood">Seafood</option>
                 <option value="tofu">Tofu</option>
                 <option value="veggie">Vegetable</option>
-                
-                
             </select>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="2000" value="1000" class="slider" id="myRange">
+                <p>Max Calories: <span id="demo"></span></p>
+            </div>
             <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
 ​
             <div id="rows">
@@ -104,8 +156,15 @@
                 <div class="row" id="row3"></div>
             </div>
 ​
-​
-​
 </body>
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+​
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
 ​
 </html>

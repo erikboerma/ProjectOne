@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 ​
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,126 +9,30 @@
     <title>Nutrition</title>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="Ideas/nutrition.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="assets/css/nutritionStyle.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-​
-    <style>
-        .label {
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        
-        h1 {
-            text-align: center;
-            font-weight: bolder;
-            font-size: 75px;
-        }
-        
-        #nfacts {
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        ul {
-            text-align: left;
-        }
-        
-        li {
-            text-align: left;
-        }
-        
-        #allergy {
-            text-align: left;
-            font-size: 10px;
-            font-weight: bold;
-        }
-        
-        #rows {
-            align-content: center;
-        }
-        
-        .col {
-            align-content: center;
-        }
-        
-        .row {
-            align-content: center;
-        }
-        
-        .jumbotron {
-            background-image: url("assets/images/nut.jpg");
-            color: white;
-            font-weight: bolder;
-        }
-        
-        label {
-            font-size: 25px;
-            font-weight: bold;
-        }
-        
-        .slidecontainer {
-            width: 100%;
-        }
-        
-        .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 10px;
-            border-radius: 5px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-        }
-        
-        .slider:hover {
-            opacity: 1;
-        }
-        
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: #4CAF50;
-            cursor: pointer;
-        }
-        
-        .slider::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: #4CAF50;
-            cursor: pointer;
-        }
+    ​
 
-        #submit1 {
-           background: #4CAF50;
-           font-weight: bold;
-           color: white;
-       }
-    </style>
-​
 </head>
 <nav class="navbar navbar-dark bg-dark">
     <!-- Navbar content -->
-​
+    ​
     <a href="../ProjectOne/home.html">Home Page</a>
     <a href="../ProjectOne/workout1.html">Workout Page</a>
     <a href="../ProjectOne/nutrition.html">Nutrition Page</a>
     <a href="../ProjectOne/loginpage.html">Login Page</a>
-​
+    ​
 </nav>
 ​
 ​
+
 <body>
     <div class="jumbotron">
         <h1>Nutrition Page</h1>
     </div>
-​
+    ​
     <div class="row">
         <div class="form-group">
             <label for="exampleFormControlSelect1">SEARCH RECIPES BY A CORE INGREDIENT:</label>
@@ -144,33 +49,26 @@
                 <p>Max Calories: <span id="demo"></span></p>
             </div>
             <a class="btn btn-primary btn-lg" id="submit1" role="button">Submit</a>
-​
+            ​
             <div id="rows">
                 <div class="row" id="row1">
-                    <!-- <div class="col" id="a">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-body">
-                                <h5 class="card-title">Recipe: <span class="label"></span> </h5>
-                                <p class="card-text"><span class="facts" id="0"><li></li><li></li><li></li><li></li></span></p>
-                                <p class="card-text"><span class="ingredients" id="1a"></span></p>
-                                <p class="card-text"><span class="nutrition" id="1a"></span></p> -->
-​
-​
+
+                    ​
                 </div>
                 <div class="row" id="row2"></div>
                 <div class="row" id="row3"></div>
             </div>
-​
+            ​
 </body>
 <script>
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     output.innerHTML = slider.value;
-​
-    slider.oninput = function() {
+
+    slider.oninput = function () {
         output.innerHTML = this.value;
     }
 </script>
 ​
+
 </html>

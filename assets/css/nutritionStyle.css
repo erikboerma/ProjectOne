@@ -103,3 +103,6 @@ li {
   font-weight: bold;
   color: white;
 }
+nav.navbar.navbar-dark.bg-dark.nuts {
+  margin-top: -25px;
+}

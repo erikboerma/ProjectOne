@@ -2,20 +2,19 @@ var apiKey = "c1af05bee1161ebc3a62cf3369b2b344";
 var apiID = "c6bee22a";
 var protein = "";
 
-// var startCals = 10; //range
-// var endCals = 5000;
-console.log(protein);
+
+// console.log(protein);
 
 function displayRecipe() {
 
     var queryURL = "https://api.edamam.com/search?q=" + protein + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=3&to=12&calories=0-" + $("#myRange").val() + "";
-    console.log(queryURL)
+    // console.log(queryURL)
     $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-        .then(function(response) {
-            console.log(response)
+        url: queryURL,
+        method: "GET"
+    })
+        .then(function (response) {
+            // console.log(response)
             var num = ["a", "b", "c", "d", "e", "h", "i", "j", "k"]
             for (var k = 0; k < response.hits.length; k++) {
                 var newDiv = $("<div>");
@@ -83,7 +82,7 @@ $(document).on("click", "#submit1", function nutrition() {
     $("#row2").empty()
     $("#row3").empty()
     protein = $("#APIsearch").val()
-    console.log(protein)
+    // console.log(protein)
     switch (parseInt(protein)) {
         case "beef":
             protein = "beef";

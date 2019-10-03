@@ -42,7 +42,7 @@ li {
 }
 
 .jumbotron {
-  background-image: url("assets/images/nut.jpg");
+  background-image: url("/assets/images/nut.jpg");
   color: white;
   font-weight: bolder;
 }

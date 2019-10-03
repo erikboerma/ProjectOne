@@ -87,14 +87,7 @@
              // }
              database.ref("/users").push(newUser)
             })
-             console.log(user.username)
-             console.log(user.nameF)
-             console.log(user.nameL)
-             console.log(user.age)
-             console.log(user.sex)
-             console.log(user.weight)
-             console.log(user.height)    
-             console.log(user.goal)
+            
              
         // }
         

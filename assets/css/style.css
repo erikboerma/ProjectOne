@@ -130,3 +130,7 @@ a {
 #submitLogin {
     margin-left: 44%;
 }
+
+nav#navbar {
+  margin-top: -25px;
+}

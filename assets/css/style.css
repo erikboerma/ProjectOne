@@ -53,11 +53,11 @@ a {
 
 .mainContainer {
   background-color: black;
-  width: 1200px;
+  /* width: 1200px; */
   border: 2px solid black;
   border-radius: 30px;
-  margin: 5%;
   align-content: center;
+  margin-top: 10%;  
 }
 .workHead {
   text-align: center;
@@ -129,4 +129,8 @@ a {
 
 #submitLogin {
     margin-left: 44%;
+}
+
+nav#navbar {
+  margin-top: -25px;
 }
